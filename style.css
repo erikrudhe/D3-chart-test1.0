@@ -1,0 +1,41 @@
+#navigation{
+  margin-left: 295px;
+  margin-top: 8px;
+}
+
+#navigation a{
+  font-family: sans-serif;
+  font-style: normal;
+  color: black;
+  padding: 8px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, .btn:hover {
+  background-color: steelblue;
+  color: white;
+}
+
+#chart1 h1{
+  margin-left:240px ;
+  font-family: sans-serif;
+}
+#chart2 h1{
+  margin-left:240px ;
+  font-family: sans-serif;
+}
+
+.hej:hover {
+ fill:steelblue;
+}

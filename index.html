@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Stacked bar chart</title>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <style>
+
+    </style>
+    
+    <body>
+        <script>
+                function showPage(id)
+            {
+            var totalNumberOfPages = 2;
+            for(i=1; i<=totalNumberOfPages; i++)
+            {
+            if(document.getElementById('chart'+i))
+                document.getElementById('chart'+i).style.display='none';
+                }
+            if(document.getElementById('chart'+id))
+                document.getElementById('chart'+id).style.display='block'
+            }
+        </script>
+
+       
+        
+
+        <div id="chart1" style="display: block;">
+            <h1>Graf nummer: 1</h1>
+        </div>
+        <div id="chart2" style="display: none;">
+            <h1>Graf nummer: 2</h1>
+        </div>
+
+        
+        <div id="navigation">
+            <a class="btn active" href="javascript: onClick=showPage('1')">graf 1</a>
+            <a class="btn" href="javascript: onClick=showPage('2')">graf 2</a>
+        </div>
+
+        <script>
+            // Add active class to the current button (highlight it)
+            var header = document.getElementById("navigation");
+            var btns = header.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function() {
+              var current = document.getElementsByClassName("active");
+              current[0].className = current[0].className.replace(" active", "");
+              this.className += " active";
+              });
+            }
+        </script>
+    
+
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="barChart.js"></script>
+        <script src="barChart2.js"></script>
+    </body>
+</html>
